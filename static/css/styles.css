@@ -1,4 +1,13 @@
-h1 {
-    color: red;
-    
+
+.form-layout{
+
+    border-radius: 15px;
+    width: 500px;
+
+}
+
+.message-text{
+
+    color: white;
+
 }
