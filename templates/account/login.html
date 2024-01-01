@@ -1,25 +1,49 @@
-{% extends 'base.html' %}
+{% extends 'account/base.html' %}
 
-{% block title %}
-Register
-{% endblock %}
+{% load crispy_forms_tags %}
+
 
 {% block content %}
-<section class="section-intro">
-    <header>
-        <h1>Welcome to your Barber Shop.</h1>
-    </header>
-</section>
 
-<section>
-    <div class="container py-5">
-        <h1>Register</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn-primary" type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="{% url 'login' %}" class="btn-primary">Login</a></p>
-    </div>
-</section>
+    <body>
+
+        <div class="container bg-light shadow-md p-5 form-layout">
+
+            <h3> Login to your account </h3>
+
+            <hr>
+            <br>
+
+            <form method="POST" autocomplete="off">
+
+                {% csrf_token %}
+
+                {{form.username|as_crispy_field}}
+
+                <br>
+
+                {{form.password|as_crispy_field}}
+
+                <br>
+
+                <button type="submit" class="btn btn-primary w-100 btn-block p-2"> Login &nbsp; <i class="fa fa-key" aria-hidden="true"></i> </button>
+
+
+            </form>
+
+            <br>
+
+            <div class="text-center">
+
+                <p> Don't have an account? </p> <a href="{% url 'register' %}"> Register </a>
+
+            </div>
+
+
+        </div>
+
+        <br>
+
+    </body>
+
 {% endblock %}

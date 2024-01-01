@@ -14,7 +14,11 @@ class CreateUserForm(UserCreationForm):
         
 # - login a user
 
-def LoginForm(AuthenticationForm):
+class LoginForm(AuthenticationForm):
     
     username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
+    
+    def __init__(self, *args, **kwargs):
+        authentication_form = kwargs.pop('authentication_form', AuthenticationForm)
+        super().__init__(*args, **kwargs)
