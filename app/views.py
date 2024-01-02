@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import TemplateView
 from django.contrib import messages
-from .forms import CreateUserForm, LoginForm
+from .forms import CreateUserForm, LoginForm, CreateRecordForm, UpdateRecordForm
 from django.contrib.auth import login
 
 
@@ -72,6 +72,31 @@ def dashboard(request):
     context = {'records': my_records}
 
     return render(request, 'account/dashboard.html', context=context)
+
+
+# - Create an appointment
+
+@login_required(login_url='login')
+def create_record(request):
+
+    form = CreateRecordForm()
+
+    if request.method == "POST":
+
+        form = CreateRecordForm(request.POST)
+
+        if form.is_valid():
+
+            form.save()
+
+            messages.success(request, "Your record was created!")
+
+            return redirect("dashboard")
+
+    context = {'form': form}
+
+    return render(request, 'account/create-record.html', context=context)
+
 
 
 
