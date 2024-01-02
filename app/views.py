@@ -2,11 +2,18 @@ from django.shortcuts import render, redirect
 from django.views.generic.base import TemplateView
 from django.contrib import messages
 from .forms import CreateUserForm, LoginForm
+from django.contrib.auth import login
+
 
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate
 
 from django.contrib.auth.decorators import login_required
+from .models import Record
+
+
+
+
 
 
 
@@ -54,4 +61,26 @@ def my_login(request):
     context = {'form': form}
     return render(request, 'account/login.html', context=context)
         
+
+# - dashboard
+ 
+@login_required(login_url='login')
+def dashboard(request):
     
+    my_records = Record.objects.all()
+
+    context = {'records': my_records}
+
+    return render(request, 'account/dashboard.html', context=context)
+
+
+
+# - User logout
+
+def user_logout(request):
+
+    auth.logout(request)
+
+    messages.success(request, "Logout success!")
+
+    return redirect("login")
