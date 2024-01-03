@@ -136,6 +136,18 @@ def singular_record(request, pk):
     return render(request, 'account/view-record.html', context=context)
 
 
+# - Delete a record
+
+@login_required(login_url='login')
+def delete_record(request, pk):
+
+    record = Record.objects.get(id=pk)
+    
+    record.delete()
+    
+    messages.success(request, "Your record was deleted!")
+    
+    return redirect("dashboard")
 
 
 
