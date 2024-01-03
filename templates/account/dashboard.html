@@ -49,9 +49,8 @@
             <td> {{record.date}}</td>
             <td> {{record.time}}</td>
             <td> {{record.note}}</td>
-            <td> {{record.creation_date}} </td>
 
-            <td> <a class="btn btn-success btn-sm" href="{% url 'create-record' %}"> <i class="fa fa-eye" aria-hidden="true"></i> </a> </td>
+            <td> <a class="btn btn-success btn-sm" href="{% url 'record' record.id %}">BOOK <i class="fa fa-eye" aria-hidden="true"></i> </a> </td>
 
         </tr>
 
