@@ -89,7 +89,7 @@ def create_record(request):
 
             form.save()
 
-            messages.success(request, "Your record was created!")
+            messages.success(request, "Your appointment has been created!")
 
             return redirect("dashboard")
 
@@ -115,7 +115,7 @@ def update_record(request, pk):
 
             form.save()
 
-            messages.success(request, "Your record was updated!")
+            messages.success(request, "Your appointment has been updated!")
 
             return redirect("dashboard")
         
@@ -136,7 +136,7 @@ def singular_record(request, pk):
     return render(request, 'account/view-record.html', context=context)
 
 
-# - Delete a record
+# - Delete an appointment
 
 @login_required(login_url='login')
 def delete_record(request, pk):
@@ -145,7 +145,7 @@ def delete_record(request, pk):
     
     record.delete()
     
-    messages.success(request, "Your record was deleted!")
+    messages.success(request, "Your appointment has been deleted!")
     
     return redirect("dashboard")
 
