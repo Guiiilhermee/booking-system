@@ -98,7 +98,7 @@ def create_record(request):
     return render(request, 'account/create-record.html', context=context)
 
 
-# - Update a record
+# - Update an appointment
 
 @login_required(login_url='login')
 def update_record(request, pk):
