@@ -32,17 +32,17 @@
 
         {% for message in messages %}
 
-          {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
 
             <p id="message-timer" class="alert alert-success float-center text-center message-text">
-              
-              <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
+
+                <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
 
             </p>
 
-          {% endif %}
+        {% endif %}
 
-          {% endfor %}
+        {% endfor %}
 
         {% block content %}
         
@@ -51,6 +51,52 @@
         {% endblock %}
 
     </div>
+
+
+    <footer class="footer text-white py-2 mt-3">
+        <div class="container text-center">
+            
+
+        <div class="info-container">
+            <div class="opening-time">
+                <h3>Opening Time <i class="fa-regular fa-calendar-days"></i></h3>
+                <p>
+                    <span class="contact-item">Mon-Fri: 10:00 AM - 7:00 PM</span>
+                    <span class="contact-item">Sat-Sun: 12:00 AM - 5:00 PM</span>
+                </p>
+            </div>
+            <h1><i class="fa-solid fa-utensils fa-beat-fade"></i></h1>
+            <div class="contact-adress">
+                <h3>Contact <i class="fa-solid fa-location-dot"></i></h3>
+                <p>
+                    <span class="contact-item">(123) 456-7890</span>
+                    <span class="contact-item">123 Spire Street</span>
+                    <span class="contact-item">Styletown, 123</span>
+                </p>
+                </div>
+            </div>
+
+            <ul class="social-networks">
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+
+                </li>
+                <li>
+                    <a href="https://twitter.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Twitter page (opens in a new tab)">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </li>
+            </ul>
+            <p class="mb-0">© 2023 Our Barber shop. All rights reserved.</p>
+        </div>
+    </footer>
 
 
     
@@ -64,7 +110,7 @@
 
 
     
- 
+
 </body>
 
 </html>

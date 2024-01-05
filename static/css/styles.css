@@ -11,3 +11,73 @@
     color: white;
 
 }
+
+
+
+
+.contact-adress {
+    display: inline;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    flex-basis: 10%;
+
+}
+
+.flex-column-form h3 {
+    font-size: 50px;
+    color: rgba(27, 2, 37, 0.833);
+}
+
+.btn.btn-link:hover {
+    background-color: #5ec07c;
+}
+
+
+
+.opening-time,
+.contact-adress {
+    flex: 1;
+    font-size: 1.2em;
+}
+
+.form-group p {
+    font-size: 1.2em;
+    color: #100c0c;
+}
+
+.opening-time p span,
+.contact-adress p span {
+    display: block;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+
+.social-networks i {
+    font-size: 200%;
+    margin: 1%;
+    padding: 5%;
+    color: #ffffff;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.social-networks {
+    text-align: center;
+    margin: 0%;
+    padding: 0%
+}
+
+.social-networks>li {
+    display: inline;
+}
+
+.mb-0 {
+    color: white;
+    
+}
