@@ -22,6 +22,13 @@ if os.path.isfile("env.py"):
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# Cloudinary imports
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -166,8 +173,10 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+
+
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'diiwrl3tz',
-    'API_KEY': '665813488639484',
-    'API_SECRET': '4WrOH1E5kmzc7DVOXve91bj0hEI',    
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
