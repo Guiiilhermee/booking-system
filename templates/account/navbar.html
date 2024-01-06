@@ -32,15 +32,51 @@
 
         {% if user.is_authenticated %}
 
+        <li class="nav-item">
+      
+          <a class="nav-link" href="{% url 'dashboard' %}"> Home &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+
+        </li>
+
+
+        &nbsp;     &nbsp;     &nbsp; 
+
+        <li class="nav-item">
+      
+          <a class="nav-link" href="{% url 'dashboard' %}"> About us &nbsp; <i class="fa fa-hand-o-left" aria-hidden="true"></i> </a>
+
+        </li>
+
+
+        &nbsp;     &nbsp;     &nbsp; 
+        
           <li class="nav-item">
       
-            <a class="nav-link" href="{% url 'dashboard' %}"> dashboard &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
+            <a class="nav-link" href="{% url 'dashboard' %}"> Services &nbsp; <i class="fa fa-scissors" aria-hidden="true"></i> </a>
 
           </li>
 
 
           &nbsp;     &nbsp;     &nbsp; 
 
+          <li class="nav-item">
+      
+            <a class="nav-link" href="{% url 'dashboard' %}"> Prices &nbsp; <i class="fa fa-eur" aria-hidden="true"></i> </a>
+
+          </li>
+
+
+          &nbsp;     &nbsp;     &nbsp; 
+
+
+          <li class="nav-item">
+      
+            <a class="nav-link" href="{% url 'dashboard' %}"> Contact &nbsp; <i class="fa fa-mobile" aria-hidden="true"></i> </a>
+
+          </li>
+
+
+          &nbsp;     &nbsp;     &nbsp; 
 
           <li class="nav-item">
 
@@ -54,8 +90,54 @@
       {% else %}
 
       <li class="nav-item">
+      
+        <a class="nav-link" href="{% url 'dashboard' %}"> Home &nbsp; <i class="fa fa-home" aria-hidden="true"></i> </a>
 
-        <a class="nav-link" href="{% url 'register' %}"> Register </a>
+      </li>
+
+
+      &nbsp;     &nbsp;     &nbsp;
+
+      <li class="nav-item">
+      
+        <a class="nav-link" href="{% url 'dashboard' %}"> About us &nbsp; <i class="fa fa-hand-o-left" aria-hidden="true"></i> </a>
+
+      </li>
+
+
+      &nbsp;     &nbsp;     &nbsp;
+
+      <li class="nav-item">
+      
+        <a class="nav-link" href="{% url 'dashboard' %}"> Services &nbsp; <i class="fa fa-scissors" aria-hidden="true"></i> </a>
+
+      </li>
+
+
+      &nbsp;     &nbsp;     &nbsp;
+
+      <li class="nav-item">
+      
+        <a class="nav-link" href="{% url 'dashboard' %}"> Prices &nbsp; <i class="fa fa-eur" aria-hidden="true"></i> </a>
+
+      </li>
+
+
+      &nbsp;     &nbsp;     &nbsp;
+
+      <li class="nav-item">
+      
+        <a class="nav-link" href="{% url 'dashboard' %}"> Contact &nbsp; <i class="fa fa-mobile" aria-hidden="true"></i> </a>
+
+      </li>
+
+
+      &nbsp;     &nbsp;     &nbsp;
+
+
+      <li class="nav-item">
+
+        <a class="nav-link" href="{% url 'register' %}"> Register <i class="fa fa-registered" aria-hidden="true"></i></a>
 
       </li>
 
@@ -65,9 +147,11 @@
 
       <li class="nav-item">
 
-        <a class="nav-link" href="{% url 'login' %}">Login</a>
+        <a class="nav-link" href="{% url 'login' %}">Login  <i class="fa fa-user" aria-hidden="true"></i></a>
 
       </li>
+
+
 
 
       {% endif %}
