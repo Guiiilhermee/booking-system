@@ -21,7 +21,7 @@ from .models import Record
 
 
 class HomeTemplateView(TemplateView):
-    template_name = 'account/home.html'
+    template_name = 'account/index.html'
     
     
 # - Register a user

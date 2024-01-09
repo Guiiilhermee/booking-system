@@ -2,24 +2,21 @@
 
 {% load crispy_forms_tags %}
 
+{% block title %}
+Welcome to your salon 
+{% endblock %}
 
 {% block content %}
 
+<section class="container hero">
 
 
-
-
-
-<div class="container hero">
-        <div class="row">
-            <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+        
                 <h1>SALON FOR MEN</h1>
                 <p>MODERN HAIRCUT WHERE MEN GET READY!</p>
-                    <a href="{% url 'register' %}" class="btn btn-light btn-lg action-button" type="button">register</a>
-            </div>
+                <a href="{% url 'register' %}" class="btn btn-light btn-lg action-button" type="button">register</a>
 
-        </div>
-    </div>
+</section>
 
 
 
