@@ -23,32 +23,27 @@
     </head>
     <body id="page-top">
 
-            <!-- create a navbar here -->
+        {% include 'account/navbar.html' %}
 
-    {% include 'account/navbar.html' %}
-
-    <div class="container">
-
-        <br>
 
         <!-- Notification messages -->
-
+        
         {% for message in messages %}
-
+        
         {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
-
+        
             <p id="message-timer" class="alert alert-success float-center text-center message-text">
-
+        
                 <i class="fa fa-check" aria-hidden="true"></i> &nbsp; {{message}}
-
+        
             </p>
-
+        
         {% endif %}
-
+        
         {% endfor %}
-
+        
         {% block content %}
-
+        
         {% endblock %}
 
         
