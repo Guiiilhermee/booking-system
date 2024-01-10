@@ -2,7 +2,7 @@ from django.db import models
 
 class Record(models.Model):
 
-    fname = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     email = models.CharField(max_length=255)
     phone = models.CharField(max_length=20)
     date = models.DateField(blank=True,null=True)
@@ -12,4 +12,4 @@ class Record(models.Model):
 
     def __str__(self):
 
-        return self.fname + "   " + self.email + self.phone
+        return self.name + "   " + self.email +  "   " + self.phone

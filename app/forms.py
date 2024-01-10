@@ -33,7 +33,7 @@ class CreateRecordForm(forms.ModelForm):
     class Meta:
 
         model = Record
-        fields = ['fname', 'email', 'email', 'phone', 'date', 'time', 'note',]
+        fields = ['name', 'email', 'email', 'phone', 'date', 'time', 'note',]
         
         
 # - Update an Appointment
@@ -44,5 +44,5 @@ class UpdateRecordForm(forms.ModelForm):
     class Meta:
 
         model = Record
-        fields = ['fname', 'email', 'email', 'phone', 'date', 'time', 'note',]
+        fields = ['name', 'email', 'email', 'phone', 'date', 'time', 'note',]
         
