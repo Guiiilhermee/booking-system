@@ -14,7 +14,7 @@ The site owner or administrator will have full control over the system, as provi
 - Access, update and delete any booking reservation.
 - Manage slots, incluidind their services and testimonials.
 
-### Customers
+### Customers/administrator
 
 Customers are the users of the website which can register and create their own accounts.
 

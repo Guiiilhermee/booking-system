@@ -17,7 +17,7 @@ import dj_database_url
 
 if os.path.isfile('env.py'):
     import env
-
+    
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,12 +33,13 @@ import cloudinary.api
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['django-barber-cef3846359e0.herokuapp.com']
+ALLOWED_HOSTS = ['django-barbershop-c5797054dad4.herokuapp.com',
+                 '8000-guiiilherme-bookingsyst-0ewardywlmc.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -98,6 +99,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
 
 # DATABASES = {
 #     'default': {
