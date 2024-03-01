@@ -36,7 +36,7 @@ import cloudinary.api
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['django-barbershop-c5797054dad4.herokuapp.com',
                  '8000-guiiilherme-bookingsyst-0ewardywlmc.ws-eu108.gitpod.io']
