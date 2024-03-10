@@ -66,12 +66,11 @@ There are several views handling the requests.
 
 ### Error handling
 
--
--
--
+Error 404 (Page Not Found) is handled by 404.html which can be found under templates/errors. It handles the users not registered.
 
 ### Bug fix
 
+When I Debug the project to False, there was an issue with static files (CSS/JS) not being loaded properly. To resolve this problem I realized that I had to change cloudinary_storage to under django.contrib.staticfiles and DISABLE_COLLECTSTATIC 1 from VARS in Heroku, Then commit them out and deploy again to Heroku.
 
 ### Future features
 
