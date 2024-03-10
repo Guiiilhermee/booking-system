@@ -25,19 +25,30 @@ Customers are the users of the website which can register and create their own a
 
 ### Models
 
-- 
--
+There are two models in this application: Services and Record(appointments).
+
+- Service: It represents a service offered by the barber shop such beard trim, haircut, skin fade and haircut + beard trim. Each service has a price.
+
+- Record: It represents an appointment which shows name, email, phone, date, time and service.  
+
 ### Forms
 
--
--
+There are four forms: CreateUserForm, LoginForm, CreateRecordForm and UpdateRecordForm. 
+
+- CreateUserForm: This form is used to create a new user account. The fields include , username, password and password confirmation.
+
+- LoginForm: This form is used to login into the system with a valid username and password.
+
+- CreateRecordForm: This form is used by administrators to add new records (appointments), it contains the fields name, email, phone, date, time and select the service.
+
+- UpdateRecordForm: This form is the same as createRecordForm but it is to update the records (appointments), it also contains the fields name, email, phone, date, time and select the service.
 
 ### Views
 
 -
 -
 
-![photos of the register, profile, change password]
+![register](https://github.com/Guiiilhermee/booking-system/assets/127660583/1f96f3c2-2ec8-45ed-bb9d-6d13e3f106fb)
 
 ### Error handling
 
@@ -51,13 +62,16 @@ Customers are the users of the website which can register and create their own a
 ### Future features
 
 - Enjoying the allauth library I can improve the login page with social account.   
--
+- Create a profile for each user.
+- Create time slots to the customers.
+- Add more services.
 
 ### Validator and Testing
 
 - PEP8 style guide and validated HTML and CSS code.
 - Manual testing in differents browsers and devices.
-- 
+
+![lighthouse](https://github.com/Guiiilhermee/booking-system/assets/127660583/68b988c9-5a10-46e6-a815-1fc327ec7af3)
 
 ### Unfixed Bugs
 
@@ -67,9 +81,18 @@ No unfixed bugs
 
 The project was deployed using Code-Institute-Org/gitpod-full-template.
 
-This project was deployed to Github pages using the following steps...
+This project was deployed to Github pages using the following steps
 
-- In the Github repository, navigate to the Settings tab,
+- In the Github repository, navigate to the Settings tab, from the source section drop-down menu select the main branch.
+- When the main branch has been selected, the page will automatically refesh with a detailed ribbon display to indicate the successful deployment.
+
+Heroku:
+
+- Create new heroku account or if you already have one create a new app.
+- Add a name to your new app and choosethe region Europe then go to settings and add buildpacks python.
+- Add in Config VAR. CLOUDINARY_URL, DATABASE_URL, HEROKU_HOSTNAME, HEROKU_POSTGRESQL_CYAN_URL, SECRET_KEY.
+- Connect Heroku to GitHub/repository.
+- Go to deploy
 
 ### Credits
 
