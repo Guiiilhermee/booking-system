@@ -3,22 +3,10 @@ from django.views.generic.base import TemplateView
 from django.contrib import messages
 from .forms import CreateUserForm, LoginForm, CreateRecordForm, UpdateRecordForm
 from django.contrib.auth import login
-
-
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate
-
 from django.contrib.auth.decorators import login_required
 from .models import Record
-
-
-
-
-
-
-
-
-
 
 class HomeTemplateView(TemplateView):
     template_name = 'account/home.html'

@@ -45,10 +45,24 @@ There are four forms: CreateUserForm, LoginForm, CreateRecordForm and UpdateReco
 
 ### Views
 
--
--
+There are several views handling the requests.
+
+- HomeTemplateView: Handles requests to the homepage.
+- register: Handles user registration request.
+- my_login: Handles user logins.
+- dashboard: Handles requests for displaying user's dashboard page.
+- create_record: Handles record creation request.
+- update_record: Handles updating records.
+- singular_record: Handles showing single record details.
+- delete_record: Handles deleting individual records.
+- user_logout: Handles logging out from the user's account.
 
 ![register](https://github.com/Guiiilhermee/booking-system/assets/127660583/1f96f3c2-2ec8-45ed-bb9d-6d13e3f106fb)
+![delete record](https://github.com/Guiiilhermee/booking-system/assets/127660583/06cecb3b-8c8e-49ac-9cac-b847c91bbc21)
+![dashboard](https://github.com/Guiiilhermee/booking-system/assets/127660583/ce16e28b-da68-41e3-9fb4-ebc82b37ffa8)
+![logout](https://github.com/Guiiilhermee/booking-system/assets/127660583/4e7c7f24-df64-4c82-8a6f-23ff740df7c3)
+![updated](https://github.com/Guiiilhermee/booking-system/assets/127660583/84eef1fb-39f9-44d4-9764-faacb07dfd32)
+
 
 ### Error handling
 
